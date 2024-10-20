@@ -1,0 +1,79 @@
+{
+  "commands": [
+    {
+      "name": "ping",
+      "type": "action",
+      "trigger": "textCommand",
+      "actions": [
+        {
+          "name": "Get Bot Info",
+          "file": "getBotInfo.js",
+          "data": {
+            "name": "Get Bot Info",
+            "get": "REST Ping",
+            "store": {
+              "type": "temporary",
+              "value": "Ping"
+            }
+          },
+          "id": 1729390356072
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": " has sent a message in ${tempVars('Ping')}ms \n",
+            "actionRows": [],
+            "embeds": [],
+            "channel": {
+              "type": "command",
+              "value": ""
+            },
+            "replyToInteraction": true,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ]
+          },
+          "id": 1729390336218
+        }
+      ],
+      "customId": 1729389747665,
+      "boundary": {
+        "worksIn": "guild",
+        "limits": []
+      },
+      "parameters": [],
+      "description": "Ping the bot",
+      "folder": [],
+      "goodies": {
+        "actionType": "text",
+        "variables": {
+          "temporary": [],
+          "global": [],
+          "server": [],
+          "commandVars": [],
+          "thisServer": [],
+          "thisGlobal": []
+        }
+      }
+    }
+  ],
+  "prjSrc": "Z:\\home\\devvy\\Documents\\GitHub\\bmd-open-source-bot",
+  "btk": "MTI3NDA2MTkwMDI5NjA5Mzc1Ng.GdrW6R.qzW3cfxA8fI1TzxX-hBeaZQaYSEk9a0vP69R2c",
+  "prefix": "\\",
+  "name": "BMD open source bot",
+  "color": "rgb(0,0,0)",
+  "structureType": 1,
+  "collapsed": true,
+  "folders": {},
+  "intents": {
+    "ALL": true
+  }
+}
